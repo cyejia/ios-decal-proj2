@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Start Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartScreenViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +16,435 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aK7-bB-uVA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.63529411764705879" green="0.80392156862745101" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="SsA-h9-aV5"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SsA-h9-aV5"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRR-uF-ZsG">
+                                <rect key="frame" x="197.5" y="57" width="205.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAG-au-uyr">
+                                <rect key="frame" x="249" y="281" width="102" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="IaP-2f-jNU"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tuj-YZ-yOS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IaP-2f-jNU"/>
+                                        <exclude reference="Tuj-YZ-yOS"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="EBU-il-cB4" kind="presentation" identifier="NewGameSegue" modalTransitionStyle="flipHorizontal" id="f64-t5-6pa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aK7-bB-uVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="24e-TH-Hcc"/>
+                            <constraint firstItem="dAG-au-uyr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5IA-TK-kTG"/>
+                            <constraint firstItem="uRR-uF-ZsG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7SW-Pq-c9O"/>
+                            <constraint firstItem="dAG-au-uyr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NdC-mt-Rs0"/>
+                            <constraint firstItem="aK7-bB-uVA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="PT6-aD-Lc8"/>
+                            <constraint firstItem="aK7-bB-uVA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XVR-fh-CYI"/>
+                            <constraint firstItem="uRR-uF-ZsG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="dR7-21-6wv"/>
+                            <constraint firstItem="aK7-bB-uVA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="oWN-ZI-fyk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="310"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="MsQ-qR-GYx">
+            <objects>
+                <viewController id="EBU-il-cB4" customClass="GameViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Tw-i7-Mqt"/>
+                        <viewControllerLayoutGuide type="bottom" id="tGQ-Bh-WeN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1S-lH-n9O" customClass="GameV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-IV-wd7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.63529411764705879" green="0.80392156862745101" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="GIt-9J-zwS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GIt-9J-zwS"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iBV-cx-MTf">
+                                <rect key="frame" x="0.0" y="371" width="600" height="229"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.69411764705882351" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="jNu-uf-c0l"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-Og-0S2">
+                                <rect key="frame" x="150" y="420" width="300" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjT-r4-BfJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Q">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="Nlv-jW-0bg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-fn-8LK">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="W">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="L8C-ss-Zln"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L47-jc-7M3">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="E">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="JzH-Jd-xgQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsZ-Yl-a76">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="R">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="Crb-2u-Kq5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-ZJ-UZ1">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="w2r-jD-c1S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="two-Rx-MLY">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Y">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="tM5-z5-7BD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ool-DL-98A">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="U">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="EYK-df-SZn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-zM-sWP">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="I">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="sbX-mS-tOV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-IY-dIl">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="O">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="KZJ-rq-khj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-8c-5GY">
+                                        <rect key="frame" x="270" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="P">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="d1j-Wn-Nkp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hR6-SE-ck9">
+                                <rect key="frame" x="165" y="470" width="270" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-em-g44">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="A">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="EWQ-Wp-qOi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LW-Oh-DQs">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="S0c-g2-UD4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc3-B7-xXR">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="D">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="DzB-NS-hJA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnF-f4-cWo">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="F">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="t9C-Xa-PUW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYG-Go-9w1">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="G">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="Rye-8p-ctq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-AO-BrZ">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="H">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="CGj-vs-LI9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akn-3j-K3a">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="J">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="x1r-xG-ZAX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmc-x4-N36">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="K">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="nM3-eI-WrW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9k-xq-ah9">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="L">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="9L1-hI-oea"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nf8-ZU-hCL">
+                                <rect key="frame" x="195" y="520" width="210" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxW-mN-J7w">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Z">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="4Bk-ur-SgN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-eR-HA9">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="Jrl-8a-968"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hz-KM-gzf">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="X1T-6Z-TOe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTL-ns-qrc">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="V">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="75u-M0-tGz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-f2-v9M">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="68Y-tB-9Fe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iq-le-q2X">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="N">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="hV2-rO-UQ6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duV-IC-RO8">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="M">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessLetter:" destination="EBU-il-cB4" eventType="touchUpInside" id="b79-Ye-i2k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="P8Q-e1-Loh">
+                                <rect key="frame" x="175" y="20" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="01J-fk-TzJ"/>
+                                    <constraint firstAttribute="height" constant="250" id="6EF-fD-WF4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[phrase]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-Jr-A5X">
+                                <rect key="frame" x="268" y="290" width="64.5" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="va9-0S-Af8"/>
+                                    <constraint firstAttribute="width" constant="53.5" id="wJA-Pz-9p2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="va9-0S-Af8"/>
+                                        <exclude reference="wJA-Pz-9p2"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect Letters:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYI-Gy-ELi">
+                                <rect key="frame" x="88" y="329" width="131.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[letters]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPL-Nx-qqo">
+                                <rect key="frame" x="228" y="329" width="60.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ofg-Jr-A5X" firstAttribute="top" secondItem="P8Q-e1-Loh" secondAttribute="bottom" constant="20" id="1ZL-s2-LE4"/>
+                            <constraint firstItem="hR6-SE-ck9" firstAttribute="top" secondItem="K0X-Og-0S2" secondAttribute="bottom" constant="20" id="6s7-Rj-eB0"/>
+                            <constraint firstItem="P8Q-e1-Loh" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="9zs-vi-Bsv"/>
+                            <constraint firstItem="IPL-Nx-qqo" firstAttribute="top" secondItem="Ofg-Jr-A5X" secondAttribute="bottom" constant="18.5" id="DMh-zI-iCQ"/>
+                            <constraint firstItem="Nf8-ZU-hCL" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="EPy-Zh-k0u"/>
+                            <constraint firstItem="P8Q-e1-Loh" firstAttribute="top" secondItem="h9d-IV-wd7" secondAttribute="top" constant="20" id="F3b-qh-C8J"/>
+                            <constraint firstItem="K0X-Og-0S2" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="KWx-Ko-vxA"/>
+                            <constraint firstItem="iBV-cx-MTf" firstAttribute="top" secondItem="3Tw-i7-Mqt" secondAttribute="bottom" constant="351" id="MVA-bG-Aas"/>
+                            <constraint firstItem="iBV-cx-MTf" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="PP1-cy-vUs"/>
+                            <constraint firstItem="tGQ-Bh-WeN" firstAttribute="top" secondItem="Nf8-ZU-hCL" secondAttribute="bottom" constant="50" id="TFP-Mn-uGe"/>
+                            <constraint firstItem="hR6-SE-ck9" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="VFc-5M-XyM"/>
+                            <constraint firstItem="P8Q-e1-Loh" firstAttribute="top" secondItem="3Tw-i7-Mqt" secondAttribute="bottom" id="Wvu-CZ-H1C"/>
+                            <constraint firstItem="P8Q-e1-Loh" firstAttribute="top" secondItem="3Tw-i7-Mqt" secondAttribute="bottom" constant="75" id="YGj-nH-vGY"/>
+                            <constraint firstItem="Ofg-Jr-A5X" firstAttribute="width" secondItem="h9d-IV-wd7" secondAttribute="width" id="aNn-7O-brg"/>
+                            <constraint firstItem="h9d-IV-wd7" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="axB-Iz-5nG"/>
+                            <constraint firstItem="iBV-cx-MTf" firstAttribute="width" secondItem="I1S-lH-n9O" secondAttribute="width" id="dAJ-Lz-3oz"/>
+                            <constraint firstItem="K0X-Og-0S2" firstAttribute="top" secondItem="P8Q-e1-Loh" secondAttribute="bottom" constant="75" id="haR-eI-LoC"/>
+                            <constraint firstItem="Nf8-ZU-hCL" firstAttribute="top" secondItem="hR6-SE-ck9" secondAttribute="bottom" constant="20" id="kJr-rZ-oH3"/>
+                            <constraint firstItem="cYI-Gy-ELi" firstAttribute="top" secondItem="Ofg-Jr-A5X" secondAttribute="bottom" constant="18.5" id="mmI-UQ-4RZ"/>
+                            <constraint firstItem="Ofg-Jr-A5X" firstAttribute="centerX" secondItem="h9d-IV-wd7" secondAttribute="centerX" id="nCI-U4-H8n"/>
+                            <constraint firstItem="h9d-IV-wd7" firstAttribute="centerY" secondItem="I1S-lH-n9O" secondAttribute="centerY" id="nJX-dW-C96"/>
+                            <constraint firstItem="Ofg-Jr-A5X" firstAttribute="centerX" secondItem="h9d-IV-wd7" secondAttribute="centerX" id="nmw-4B-rvt"/>
+                            <constraint firstItem="h9d-IV-wd7" firstAttribute="height" secondItem="I1S-lH-n9O" secondAttribute="height" id="o22-P5-6a4"/>
+                            <constraint firstItem="h9d-IV-wd7" firstAttribute="width" secondItem="I1S-lH-n9O" secondAttribute="width" id="qPR-2Q-uNZ"/>
+                            <constraint firstItem="P8Q-e1-Loh" firstAttribute="centerX" secondItem="I1S-lH-n9O" secondAttribute="centerX" id="sfP-KS-NdY"/>
+                            <constraint firstItem="IPL-Nx-qqo" firstAttribute="leading" secondItem="cYI-Gy-ELi" secondAttribute="trailing" constant="8" id="td6-Kw-EBo"/>
+                            <constraint firstItem="h9d-IV-wd7" firstAttribute="leading" secondItem="cYI-Gy-ELi" secondAttribute="trailing" constant="-220" id="ttw-hu-lu8"/>
+                            <constraint firstItem="tGQ-Bh-WeN" firstAttribute="top" secondItem="Nf8-ZU-hCL" secondAttribute="bottom" constant="50" id="vfT-mE-fp2"/>
+                            <constraint firstItem="tGQ-Bh-WeN" firstAttribute="top" secondItem="iBV-cx-MTf" secondAttribute="bottom" id="vsl-mo-mHB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Wvu-CZ-H1C"/>
+                                <exclude reference="YGj-nH-vGY"/>
+                                <exclude reference="sfP-KS-NdY"/>
+                                <exclude reference="MVA-bG-Aas"/>
+                                <exclude reference="aNn-7O-brg"/>
+                                <exclude reference="haR-eI-LoC"/>
+                                <exclude reference="vfT-mE-fp2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="hangmanImageView" destination="P8Q-e1-Loh" id="Q0G-9E-MRO"/>
+                        <outlet property="incorrectLettersLabel" destination="IPL-Nx-qqo" id="yRn-u5-Rly"/>
+                        <outlet property="phraseLabel" destination="Ofg-Jr-A5X" id="EPG-gf-JuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgl-20-jyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="310"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hangman1.gif" width="100" height="100"/>
+    </resources>
 </document>

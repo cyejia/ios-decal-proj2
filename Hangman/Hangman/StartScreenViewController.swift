@@ -21,6 +21,10 @@ class StartScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindFromNewGame(segue: UIStoryboardSegue) {
+        performSegueWithIdentifier("NewGameSegue", sender: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
