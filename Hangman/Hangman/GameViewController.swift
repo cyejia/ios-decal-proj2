@@ -77,7 +77,8 @@ class GameViewController: UIViewController {
             self.presentViewController(gameWonAlertController, animated: true, completion: nil)
         }
         
-        hangmanImageView.image = UIImage(named: "hangman\(guessedIncorrectLettersArray.count + 1).gif")
+        hangmanImageView.image = UIImage(named: "Pinata\(guessedIncorrectLettersArray.count).png")
+        // Images from https://dribbble.com/shots/2534817-Pinata-Fun
         
     }
     

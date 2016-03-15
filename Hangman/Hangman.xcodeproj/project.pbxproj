@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50AF377E1C9798160031CBE7 /* Pinata0.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF37771C9798160031CBE7 /* Pinata0.png */; };
+		50AF377F1C9798160031CBE7 /* Pinata1.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF37781C9798160031CBE7 /* Pinata1.png */; };
+		50AF37801C9798160031CBE7 /* Pinata2.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF37791C9798160031CBE7 /* Pinata2.png */; };
+		50AF37811C9798160031CBE7 /* Pinata3.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF377A1C9798160031CBE7 /* Pinata3.png */; };
+		50AF37821C9798160031CBE7 /* Pinata4.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF377B1C9798160031CBE7 /* Pinata4.png */; };
+		50AF37831C9798160031CBE7 /* Pinata5.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF377C1C9798160031CBE7 /* Pinata5.png */; };
+		50AF37841C9798160031CBE7 /* Pinata6.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AF377D1C9798160031CBE7 /* Pinata6.png */; };
 		EC93104C1C891F2C00BE736C /* hangman1.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC9310451C891F2C00BE736C /* hangman1.gif */; };
 		EC93104D1C891F2C00BE736C /* hangman2.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC9310461C891F2C00BE736C /* hangman2.gif */; };
 		EC93104E1C891F2C00BE736C /* hangman3.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC9310471C891F2C00BE736C /* hangman3.gif */; };
@@ -44,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50AF37771C9798160031CBE7 /* Pinata0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata0.png; path = "pinata-img/Pinata0.png"; sourceTree = "<group>"; };
+		50AF37781C9798160031CBE7 /* Pinata1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata1.png; path = "pinata-img/Pinata1.png"; sourceTree = "<group>"; };
+		50AF37791C9798160031CBE7 /* Pinata2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata2.png; path = "pinata-img/Pinata2.png"; sourceTree = "<group>"; };
+		50AF377A1C9798160031CBE7 /* Pinata3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata3.png; path = "pinata-img/Pinata3.png"; sourceTree = "<group>"; };
+		50AF377B1C9798160031CBE7 /* Pinata4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata4.png; path = "pinata-img/Pinata4.png"; sourceTree = "<group>"; };
+		50AF377C1C9798160031CBE7 /* Pinata5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata5.png; path = "pinata-img/Pinata5.png"; sourceTree = "<group>"; };
+		50AF377D1C9798160031CBE7 /* Pinata6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pinata6.png; path = "pinata-img/Pinata6.png"; sourceTree = "<group>"; };
 		EC9310451C891F2C00BE736C /* hangman1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hangman1.gif; path = "basic-hangman-img/hangman1.gif"; sourceTree = "<group>"; };
 		EC9310461C891F2C00BE736C /* hangman2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hangman2.gif; path = "basic-hangman-img/hangman2.gif"; sourceTree = "<group>"; };
 		EC9310471C891F2C00BE736C /* hangman3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hangman3.gif; path = "basic-hangman-img/hangman3.gif"; sourceTree = "<group>"; };
@@ -94,6 +108,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50AF37851C9798230031CBE7 /* PinataImages */ = {
+			isa = PBXGroup;
+			children = (
+				50AF37771C9798160031CBE7 /* Pinata0.png */,
+				50AF37781C9798160031CBE7 /* Pinata1.png */,
+				50AF37791C9798160031CBE7 /* Pinata2.png */,
+				50AF377A1C9798160031CBE7 /* Pinata3.png */,
+				50AF377B1C9798160031CBE7 /* Pinata4.png */,
+				50AF377C1C9798160031CBE7 /* Pinata5.png */,
+				50AF377D1C9798160031CBE7 /* Pinata6.png */,
+			);
+			name = PinataImages;
+			sourceTree = "<group>";
+		};
 		EC9310531C891F3400BE736C /* basic-hangman-img */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +200,7 @@
 		ECC22F731C8917DC00749E58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50AF37851C9798230031CBE7 /* PinataImages */,
 				ECC22F461C89177600749E58 /* Main.storyboard */,
 				EC9310531C891F3400BE736C /* basic-hangman-img */,
 			);
@@ -292,16 +321,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC22F7C1C891A6700749E58 /* phrases.plist in Resources */,
+				50AF37801C9798160031CBE7 /* Pinata2.png in Resources */,
 				EC93104E1C891F2C00BE736C /* hangman3.gif in Resources */,
 				ECC22F4D1C89177600749E58 /* LaunchScreen.storyboard in Resources */,
 				EC93104D1C891F2C00BE736C /* hangman2.gif in Resources */,
+				50AF37841C9798160031CBE7 /* Pinata6.png in Resources */,
 				EC9310511C891F2C00BE736C /* hangman6.gif in Resources */,
 				ECC22F4A1C89177600749E58 /* Assets.xcassets in Resources */,
 				EC9310521C891F2C00BE736C /* hangman7.gif in Resources */,
+				50AF37811C9798160031CBE7 /* Pinata3.png in Resources */,
+				50AF377F1C9798160031CBE7 /* Pinata1.png in Resources */,
 				ECC22F481C89177600749E58 /* Main.storyboard in Resources */,
+				50AF37831C9798160031CBE7 /* Pinata5.png in Resources */,
 				EC93104F1C891F2C00BE736C /* hangman4.gif in Resources */,
 				EC93104C1C891F2C00BE736C /* hangman1.gif in Resources */,
 				EC9310501C891F2C00BE736C /* hangman5.gif in Resources */,
+				50AF377E1C9798160031CBE7 /* Pinata0.png in Resources */,
+				50AF37821C9798160031CBE7 /* Pinata4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
